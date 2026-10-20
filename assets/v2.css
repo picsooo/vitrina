@@ -213,3 +213,10 @@ html,body{overflow-x:clip}
 .pc .quick{width:44px;height:44px;max-height:44px;max-width:44px}
 #newin.reel{scroll-padding-inline:28px}
 @media(max-width:700px){#newin.reel{scroll-padding-inline:16px}}
+
+.appbar .in{background:linear-gradient(120deg,#6D3BEB,#9B6BFF 60%,#FF7FB3)}
+.appbar .in:before{background:var(--lime);opacity:.35}
+.appbar .ico{background:#fff;color:var(--bord);font-family:var(--serif)}
+.appbar p{color:#EDE6FF}.appbar .os span{border-color:rgba(255,255,255,.4);color:#fff}
+.appbar .btn{background:var(--lime);border-color:var(--lime);color:var(--ink)}
+.appbar .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}

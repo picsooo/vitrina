@@ -1,5 +1,6 @@
 window.VITRINA_I18N = {
 fr:{
+ appbar_t:"L’appli Vitrina", appbar_s:"Voyez l’application et installez-la sur votre téléphone, pas à pas.", appbar_b:"Voir l’application", appbar_i:"Comment l’installer",
  stamp:"pièce unique ✦", nav_home:"Accueil", nav_shop:"Boutique", nav_sell:"Vendre", nav_app:"L'appli",
  country:"Pays", dz:"Algérie", gr:"Grèce", cart:"Panier",
  hero_kicker:"Vintage & seconde main · Algérie — Grèce",
@@ -53,6 +54,7 @@ fr:{
  lang:"Langue"
 },
 en:{
+ appbar_t:"The Vitrina app", appbar_s:"See the app and install it on your phone, step by step.", appbar_b:"See the app", appbar_i:"How to install",
  stamp:"one of a kind ✦", nav_home:"Home", nav_shop:"Shop", nav_sell:"Sell", nav_app:"The app",
  country:"Country", dz:"Algeria", gr:"Greece", cart:"Bag",
  hero_kicker:"Vintage & second-hand · Algeria — Greece",
@@ -106,6 +108,7 @@ en:{
  lang:"Language"
 },
 el:{
+ appbar_t:"Η εφαρμογή Vitrina", appbar_s:"Δες την εφαρμογή και εγκατάστησέ τη στο κινητό σου, βήμα βήμα.", appbar_b:"Δες την εφαρμογή", appbar_i:"Πώς την εγκαθιστώ",
  stamp:"μοναδικό ✦", nav_home:"Αρχική", nav_shop:"Κατάστημα", nav_sell:"Πούλησε", nav_app:"Η εφαρμογή",
  country:"Χώρα", dz:"Αλγερία", gr:"Ελλάδα", cart:"Καλάθι",
  hero_kicker:"Vintage & μεταχειρισμένα · Αλγερία — Ελλάδα",
@@ -159,6 +162,7 @@ el:{
  lang:"Γλώσσα"
 },
 ar:{
+ appbar_t:"تطبيق Vitrina", appbar_s:"شاهدي التطبيق وثبّتيه على هاتفك خطوة بخطوة.", appbar_b:"شاهدي التطبيق", appbar_i:"كيف أثبّته؟",
  stamp:"قطعة فريدة ✦", nav_home:"الرئيسية", nav_shop:"المتجر", nav_sell:"بيعي", nav_app:"التطبيق",
  country:"البلد", dz:"الجزائر", gr:"اليونان", cart:"السلة",
  hero_kicker:"فينتاج وملابس مستعملة · الجزائر — اليونان",

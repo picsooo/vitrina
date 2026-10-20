@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>Vitrina</title><meta name="robots" content="noindex,nofollow">
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#7B2333">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Vitrina"><meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" href="img/icon-180.png"><link rel="icon" href="img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..600;1,400..600&family=Manrope:wght@400..700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/app.css">
+<style>
+html,body{height:100%;overflow:hidden;background:var(--paper)}
+body:before{display:none}
+.solo{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:var(--paper2)}
+.solo .scr2{width:min(430px,100vw);height:min(932px,100dvh);border-radius:0;padding-top:env(safe-area-inset-top);box-shadow:0 30px 80px -30px rgba(0,0,0,.4)}
+@media(min-width:500px){.solo .scr2{border-radius:36px;height:min(880px,94dvh)}}
+.solo .tabs{padding-bottom:calc(10px + env(safe-area-inset-bottom))}
+.solo .onb .in{padding-bottom:calc(30px + env(safe-area-inset-bottom))}
+</style>
+</head><body data-base="">
+<div class="solo"><div class="scr2"><div class="view" id="view"></div><div class="tabs" id="tabs"></div></div></div>
+<script src="assets/produits.js"></script><script src="assets/i18n.js"></script><script src="assets/app.js"></script>
+</body></html>

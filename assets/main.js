@@ -64,7 +64,8 @@ function header(){
   document.querySelector(".burger").onclick=function(){document.querySelector("nav.main").classList.toggle("open")};
 }
 function footer(){
-  var f='<footer><div class="wrap"><div class="cols">'+
+  var f='<section class="appbar"><div class="in"><div class="ico">V</div><div><b>'+t("appbar_t")+'</b><p>'+t("appbar_s")+'</p><div class="os"><span>📱 iPhone</span><span>🤖 Android</span></div></div><div class="bt"><a class="btn" href="app.html">'+t("appbar_b")+' <span class="arrow">→</span></a><a class="btn ghost" href="app.html#installer">'+t("appbar_i")+'</a></div></div></section>'+
+  '<footer><div class="wrap"><div class="cols">'+
   '<div><a href="index.html" class="logo"><span class="w">Vitr<i>i</i>na</span><span class="s">vintage · seconde main</span></a><p class="tag">'+t("footer_tag")+'</p></div>'+
   '<div><h4>'+t("footer_shop")+'</h4><ul>'+["robes","hauts","bas","vestes","sacs"].map(function(c){return '<li><a href="boutique.html?cat='+c+'">'+t("cat_"+c)+'</a></li>'}).join("")+'</ul></div>'+
   '<div><h4>'+t("footer_help")+'</h4><ul><li><a href="index.html#how">'+t("faq_deliv")+'</a></li><li><a href="index.html#how">'+t("faq_pay")+'</a></li><li><a href="index.html#how">'+t("faq_ret")+'</a></li><li><a href="vendre.html">'+t("nav_sell")+'</a></li></ul></div>'+

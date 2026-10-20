@@ -26,3 +26,17 @@ html[lang=ar] .appage .side h1 em{font-family:var(--sans);font-style:normal;font
 .abtn.ok{background:#2BD46B;border-color:#2BD46B}
 .done{background:linear-gradient(135deg,#6D3BEB,#FF7FB3)}
 .vswitch{background:var(--bord)}
+.st .n{background:var(--bord)}
+.ostabs button.on{background:var(--bord);border-color:var(--bord)}
+.fc b{font-family:var(--sans);font-weight:800;letter-spacing:-.03em}
+.ap-sec h2,.ap-hero h1{font-family:var(--sans);font-weight:800;letter-spacing:-.045em}
+.ap-hero h1 em{font-family:var(--serif);font-weight:400;letter-spacing:-.02em;color:var(--bord)}
+.blob.b1{background:#E3D8FF}.blob.b2{background:#FFD6E8}.blob.b3{background:#EAF7B8}
+.inst{border-radius:36px}
+.chipsrow button b{font-family:var(--sans);font-style:normal;font-weight:800}
+.chipsrow button.on{background:var(--bord);border-color:var(--bord)}
+.chipsrow button.on b{color:#D9F36A}
+.ap-top{background:rgba(250,248,245,.8)}
+.ap-top .logo .w{font-family:var(--sans);font-style:normal;font-weight:800;letter-spacing:-.06em}
+.ap-top .logo .w i{font-family:var(--serif);font-weight:400;font-style:italic;color:var(--bord)}
+.orb.o4{background:var(--bord)}
