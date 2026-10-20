@@ -66,6 +66,7 @@ ar:{t_kick:"نموذج التطبيق", t_h1a:"Vitrina،", t_h1b:"في جيبك.
  o1:"تتبع الطلب", o2:"عناويني", o3:"تنبيهات المقاس", o4:"اللغة", o5:"البلد",
  favs_empty:"اضغطي ♡ على قطعة لتجديها هنا.", explore:"استكشاف"
 }};
+var B=document.body.getAttribute("data-base")||"";
 var S={lang:"fr",pays:"dz",scr:"onb",prod:P[13],bag:[],fav:[],cat:"all",sold:false,paid:false};
 try{var l=localStorage.getItem("vitrina_lang");if(l)S.lang=JSON.parse(l);var c=localStorage.getItem("vitrina_pays");if(c)S.pays=JSON.parse(c);}catch(e){}
 if(!A[S.lang])S.lang="fr";
@@ -73,7 +74,7 @@ function t(k){return A[S.lang][k]||T0[S.lang][k]||A.fr[k]||k}
 function nm(p){return p[S.lang]||p.fr}
 function nf(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g," ")}
 function pr(p){var v=S.pays==="gr"?p.gr:p.dz; return S.pays==="gr"?nf(v)+" €":(S.lang==="ar"?nf(v)+" دج":nf(v)+" DA")}
-function im(id){return "img/p/"+id+".webp"}
+function im(id){return B+"img/p/"+id+".webp"}
 function save(k,v){try{localStorage.setItem("vitrina_"+k,JSON.stringify(v))}catch(e){}}
 var V=document.getElementById("view"), TB=document.getElementById("tabs");
 
@@ -82,7 +83,7 @@ function item(p){
 }
 var R={};
 R.onb=function(){
-  return '<div class="onb"><img src="img/e/mur-argent.webp" alt=""><div class="in"><div class="w">Vitr<i>i</i>na</div><p>'+t("welcome")+'</p>'+
+  return '<div class="onb"><img src="'+B+'img/e/mur-argent.webp" alt=""><div class="in"><div class="w">Vitr<i>i</i>na</div><p>'+t("welcome")+'</p>'+
   '<div class="lg">'+[["ar","العربية"],["el","Ελληνικά"],["fr","Français"],["en","English"]].map(function(x){return '<button data-l="'+x[0]+'" class="'+(S.lang===x[0]?'on':'')+'">'+x[1]+'</button>'}).join("")+'</div>'+
   '<div class="cn"><button data-c="dz" class="'+(S.pays==="dz"?'on':'')+'">🇩🇿 '+T0[S.lang].dz+'</button><button data-c="gr" class="'+(S.pays==="gr"?'on':'')+'">🇬🇷 '+T0[S.lang].gr+'</button></div>'+
   '<button class="abtn" data-go="home">'+t("start")+'</button></div></div>';
@@ -92,7 +93,7 @@ R.home=function(){
   return '<div class="apph"><div class="w">Vitr<i>i</i>na</div><div style="display:flex;gap:8px"><span class="ic">🔔<span class="d">3</span></span><span class="ic" data-go="bag">👜'+(S.bag.length?'<span class="d">'+S.bag.length+'</span>':'')+'</span></div></div>'+
   '<div class="search">⌕ '+t("search")+'</div>'+
   '<div class="stories">'+cats.map(function(c){return '<button class="story" data-cat="'+c[0]+'"><span class="r"><img src="'+im(c[1])+'" alt=""></span>'+T0[S.lang]["cat_"+c[0]].split(" ")[0]+'</button>'}).join("")+'</div>'+
-  '<div class="dropb" data-go="explore"><img src="img/e/mur-fleurs.webp" alt=""><span class="cd">⏱ '+t("ends")+'</span><div class="tx"><small>'+t("drop")+'</small><b>'+t("drop_t")+'</b></div></div>'+
+  '<div class="dropb" data-go="explore"><img src="'+B+'img/e/mur-fleurs.webp" alt=""><span class="cd">⏱ '+t("ends")+'</span><div class="tx"><small>'+t("drop")+'</small><b>'+t("drop_t")+'</b></div></div>'+
   '<div class="sec"><h3>'+t("trending")+'</h3><a data-go="explore">'+t("see")+'</a></div>'+
   '<div class="hs">'+P.slice(0,7).map(item).join("")+'</div>'+
   '<div class="sec"><h3>'+t("foryou")+'</h3><a data-go="explore">'+t("see")+'</a></div>'+
@@ -109,7 +110,7 @@ R.prod=function(){
   return '<div class="pimg"><img src="'+im(p.id)+'" alt=""><span class="ic back" data-go="home">'+(S.lang==="ar"?"→":"←")+'</span><button class="heart'+(S.fav.indexOf(p.id)>-1?' on':'')+'" data-f="'+p.id+'">'+(S.fav.indexOf(p.id)>-1?'♥':'♡')+'</button><div class="dots"><i></i><i></i><i></i></div></div>'+
   '<div class="pbody"><h2>'+nm(p)+'</h2><div class="pr">'+pr(p)+'</div>'+
   '<div class="pills"><span>'+T0[S.lang].size+' '+p.taille+'</span><span>'+T0[S.lang]["cond_"+p.etat]+'</span><span>'+(p.lieu==="gr"?"🇬🇷 "+T0[S.lang].from_gr:"🇩🇿 "+T0[S.lang].from_dz)+'</span></div>'+
-  '<div class="seller"><img src="img/e/logo.webp" alt=""><div><b>'+t("seller")+'</b><small>'+t("seller_s")+'</small></div><span class="ic">💬</span></div>'+
+  '<div class="seller"><img src="'+B+'img/e/logo.webp" alt=""><div><b>'+t("seller")+'</b><small>'+t("seller_s")+'</small></div><span class="ic">💬</span></div>'+
   '<p style="font-size:13px;color:var(--ink2);margin-bottom:16px">🔒 '+T0[S.lang].secure+' · 🚚 '+(S.pays==="gr"?T0[S.lang].deliv_gr:T0[S.lang].deliv_dz)+'</p>'+
   '<div class="cta2"><button class="abtn gh">'+t("offer")+'</button><button class="abtn'+(inb?' ok':'')+'" data-buy="'+p.id+'">'+(inb?t("bought"):t("buy"))+'</button></div>'+
   '<div class="sec" style="padding:22px 0 10px"><h3>'+T0[S.lang].similar+'</h3></div><div class="g2" style="padding:0">'+P.filter(function(x){return x.cat===p.cat&&x.id!==p.id}).slice(0,4).map(item).join("")+'</div></div>';
@@ -141,7 +142,7 @@ R.fav=function(){
   return '<div class="topbk"><h2>'+t("tab_fav")+'</h2></div>'+(l.length?'<div class="g2">'+l.map(item).join("")+'</div>':'<div class="empty2"><b>♡</b>'+t("favs_empty")+'</div>');
 };
 R.me=function(){
-  return '<div class="prof"><img src="img/e/logo.webp" alt=""><h3>Asma</h3><p>'+t("me_s")+' · '+(S.pays==="gr"?"🇬🇷 Αθήνα":"🇩🇿 Oran")+'</p></div>'+
+  return '<div class="prof"><img src="'+B+'img/e/logo.webp" alt=""><h3>Asma</h3><p>'+t("me_s")+' · '+(S.pays==="gr"?"🇬🇷 Αθήνα":"🇩🇿 Oran")+'</p></div>'+
   '<div class="kpis"><div><b>'+S.bag.length+'</b><span>'+t("k1")+'</span></div><div><b>12</b><span>'+t("k2")+'</span></div><div><b>'+S.fav.length+'</b><span>'+t("k3")+'</span></div></div>'+
   '<div class="seg2"><button class="on">'+t("t_wardrobe")+'</button><button>'+t("t_orders")+'</button></div>'+
   '<div class="g2" style="grid-template-columns:repeat(3,1fr);gap:6px">'+P.slice(20,26).map(function(p){return '<div class="it" data-p="'+p.id+'"><div class="im" style="border-radius:10px"><img src="'+im(p.id)+'" alt=""></div></div>'}).join("")+'</div>'+

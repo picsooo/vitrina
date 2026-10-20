@@ -1,0 +1,28 @@
+:root{--paper:#FAF8F5;--paper2:#F1EDFF;--card:#fff;--ink:#141217;--ink2:#5F5A66;--line:#E6E1EE;--bord:#6D3BEB;--olive:#6D3BEB;--blush:#EDE6FF;
+--serif:"Instrument Serif",Georgia,serif;--sans:"Inter Tight","Readex Pro",system-ui,sans-serif}
+html[lang=ar] body{--serif:"Readex Pro",serif;--sans:"Readex Pro",sans-serif}
+body:before{display:none}
+body{background:radial-gradient(1200px 600px at 50% 0,#EDE6FF,transparent 70%),var(--paper)}
+.appage .side h1{font-family:var(--sans);font-weight:800;letter-spacing:-.05em}
+.appage .side h1 em{font-family:var(--serif);font-weight:400;letter-spacing:-.02em}
+html[lang=ar] .appage .side h1 em{font-family:var(--sans);font-style:normal;font-weight:800}
+.kicker{color:var(--bord)}
+.screens button{border-radius:16px;background:#fff}
+.screens button b{font-family:var(--sans);font-style:normal;font-weight:800;color:var(--bord)}
+.screens button.on{background:var(--bord);border-color:var(--bord)}
+.screens button.on b{color:#D9F36A}
+.feat b{font-family:var(--sans);font-weight:800;letter-spacing:-.03em;font-size:22px}
+.seg{background:#EDE6FF;border:0}.seg button.on{background:var(--bord);color:#fff}
+.phone{animation:bob 6s ease-in-out infinite}
+@keyframes bob{50%{translate:0 -10px}}
+.apph .w,.onb .w{font-family:var(--sans);font-style:normal;font-weight:800;letter-spacing:-.06em}
+.apph .w i,.onb .w i{font-family:var(--serif);font-weight:400;font-style:italic}
+.onb .w i{color:#D9F36A}
+.dropb .tx b,.sec h3,.prof h3,.kpis b,.pbody .pr,.est b,.done b,.empty2 b{font-family:var(--sans);font-style:normal;font-weight:800;letter-spacing:-.04em}
+.pbody h2,.topbk h2{font-family:var(--sans);font-weight:800;letter-spacing:-.04em}
+.story span.r{background:conic-gradient(#6D3BEB,#FF5FA2,#D9F36A,#6D3BEB)}
+.tabs .plus i{background:var(--bord);box-shadow:0 8px 16px -6px rgba(109,59,235,.6)}
+.abtn{border-radius:99px}
+.abtn.ok{background:#2BD46B;border-color:#2BD46B}
+.done{background:linear-gradient(135deg,#6D3BEB,#FF7FB3)}
+.vswitch{background:var(--bord)}

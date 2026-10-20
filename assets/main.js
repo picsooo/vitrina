@@ -29,13 +29,15 @@ function money(v){
   return S.lang==="ar" ? nf(v)+" دج" : nf(v)+" DA";
 }
 function ship(){ return S.pays==="gr" ? 3.9 : 600; }
-function img(id){ return "img/p/"+id+".webp"; }
+var B=document.body.getAttribute("data-base")||"";
+function img(id){ return B+"img/p/"+id+".webp"; }
 function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]}); }
 function condTxt(e){ return t("cond_"+e); }
 function fromTxt(p){ return p.lieu==="gr"? t("from_gr") : t("from_dz"); }
 function inCart(id){ return S.cart.indexOf(id)>-1; }
 
 /* ---------- header / footer ---------- */
+var VS={fr:["Version classique","Version moderne"],en:["Classic version","Modern version"],el:["Κλασική έκδοση","Μοντέρνα έκδοση"],ar:["النسخة الكلاسيكية","النسخة العصرية"]};
 var LANGS=[["ar","ع"],["el","ΕΛ"],["fr","FR"],["en","EN"]];
 function langSeg(cls){
   return '<div class="seg '+cls+'" role="group" aria-label="'+t("lang")+'">'+LANGS.map(function(l){
@@ -68,6 +70,8 @@ function footer(){
   '<div><h4>'+t("footer_help")+'</h4><ul><li><a href="index.html#how">'+t("faq_deliv")+'</a></li><li><a href="index.html#how">'+t("faq_pay")+'</a></li><li><a href="index.html#how">'+t("faq_ret")+'</a></li><li><a href="vendre.html">'+t("nav_sell")+'</a></li></ul></div>'+
   '<div><h4>TikTok</h4><ul><li><a href="https://www.tiktok.com/@vitrine_alg" target="_blank" rel="noopener">@vitrine_alg</a></li><li><a href="app.html">'+t("nav_app")+'</a></li></ul></div>'+
   '</div><div class="bot"><span>© 2026 Vitrina. '+t("rights")+'</span><span>Algérie · Ελλάδα</span></div></div></footer>';
+  var v2=!!B, here=location.pathname.split("/").pop()||"index.html";
+  f+='<a class="vswitch" href="'+(v2?"../":"moderne/")+here+location.search+'">'+(v2?VS[S.lang][0]:VS[S.lang][1])+' <span class="arrow">→</span></a>';
   document.getElementById("ftr").innerHTML=f;
 }
 function applyI18n(){
