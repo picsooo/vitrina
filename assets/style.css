@@ -319,3 +319,5 @@ select.sel{border:1px solid var(--line);background:var(--card);padding:9px 14px;
 
 html,body{overflow-x:clip}
 @media(max-width:640px){.vswitch{bottom:12px;inset-inline-end:12px;padding:9px 14px;font-size:12px}}
+.pc .quick{-webkit-appearance:none;appearance:none;padding:0;line-height:1;aspect-ratio:1/1;min-height:0;max-height:40px;max-width:40px;font-size:18px;top:auto;flex:none}
+@media(max-width:640px){.toast{bottom:72px;max-width:calc(100vw - 32px);font-size:13px}}
